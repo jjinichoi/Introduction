@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maxmum-scale=1.0">
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/font.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/responsive.css">
+	
+	<script src="https://kit.fontawesome.com/84e77dce41.js" crossorigin="anonymous"></script>
+
+	<title>JINI</title>
+	<link rel="shortcut icon" href="./images/favicon.ico" />
+</head>
+<body>
+	<main>
+		<section id="mainVisual">
+				<div class="mainVisual_content">
+					<div id="title">
+						<div class="title-content">
+							<div class="title-container">
+							  <p class="title-container-text">
+								Hello
+							  </p>
+							  
+							  <ul class="title-container-list">
+								<li class="title-container-list-item">world!</li>
+								<li class="title-container-list-item">JINI!</li>
+								<li class="title-container-list-item">developer!</li>
+								<li class="title-container-list-item">everybody!</li>
+							  </ul>
+							</div>
+						  </div>
+						<p class="desc">프론트엔드 개발자 <span>최진이</span> 입니다.</p>
+					</div>
+					<div id="gnb">
+						<ul>
+							<li data-menuanchors="ABOUT">
+								<a href="#" onclick="j_test(0)">
+									<span>ABOUT</span>
+								</a>
+							</li>
+							<li data-menuanchors="SKILLS">
+								<a href="#" onclick="j_test(1)">
+									<span>SKILLS</span>
+								</a>
+							</li>
+							<li data-menuanchors="FAVORITE">
+								<a href="#" onclick="j_test(2)">
+									<span>FAVORITE</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="top">
+					<i class="fas fa-arrow-up" aria-hidden="true"></i>
+				</div>
+		</section>
+	<!-- mainVisual end -->
+	
+		<section id="mainContents">
+				<div class="about section" id="">
+					<div class="container">
+							<h2>ABOUT</h2>
+							<div class="about_box">
+								<dl class="profile">
+									<dt>PROFILE</dt>
+									<dd>
+										<ul>
+											<li><span>이름</span>최진이</li>
+											<li><span>생년월일</span>1997.12.03</li>
+											<li><span>이메일</span>genie9105@gmail.com</li>
+											<li><span>사는 곳</span>서울특별시 강동구</li>
+											<li><span>취미</span>운동하기/ YOUTUBE 보기</li>
+										</ul>
+									</dd>
+								</dl>
+								<dl class="history">
+									<dt>HISTORY</dt>
+									<dd>
+										<ul>
+											<li>
+												<strong>2020.03~2023.05 (3년 2개월)</strong>
+												<span>A1퍼포먼스팩토리 기술지원팀 근무</span>
+											</li>
+											<li>
+												<strong>2019.07~2019.10 (3개월)</strong>
+												<span>다이앤디자인 웹퍼블리셔 인턴</span>
+											</li>
+											<li>
+												<strong>2018.04~2018.07 (3개월)</strong>
+												<span>세종아카데미 웹&amp;모바일 코딩기초과정 수료</span>
+											</li>
+											<li>
+												<strong>2016.03~2018.02</strong>
+												<span>숭의여자대학교 디지털미디어전공 졸업</span>
+											</li>
+											<li>
+												<strong>2013.03~2016.02</strong>
+												<span>상일미디어고등학교 디지털미디어디자인과 졸업</span>
+											</li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- about end -->
+
+				<div class="skills section" id="">
+					<div class="container">
+						<h2>SKILLS</h2>
+						<ul class="graph">
+							<li>
+								<span class="g_title">HTML5</span>
+								<span class="g_bar">
+									<span class="g_percent"></span>
+								</span>
+							</li>
+							<li>
+								<span class="g_title">CSS3</span>
+								<span class="g_bar">
+									<span class="g_percent"></span>
+								</span>
+							</li>
+							<li>
+								<span class="g_title">javascript</span>
+								<span class="g_bar">
+									<span class="g_percent"></span>
+								</span>
+							</li>
+							<li>
+								<span class="g_title">반응형</span>
+								<span class="g_bar">
+									<span class="g_percent"></span>
+								</span>
+							</li>
+							<li>
+								<span class="g_title">웹 표준</span>
+								<span class="g_bar">
+									<span class="g_percent"></span>
+								</span>
+							</li>
+							<li>
+								<span class="g_title">웹 접근성</span>
+								<span class="g_bar">
+									<span class="g_percent"></span>
+								</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- skills end -->
+
+				<div class="favorite section" id="">
+					<div class="container">
+						<h2>FAVORITE</h2>
+						<ul id="favorite" class="clearfix">
+						</ul>
+					</div>
+				</div>
+				<!-- favorite end -->
+
+		</section>
+		<!-- mainContents end -->
+
+		<footer>
+			<div class="container">
+				<p>© 2023 CHOI JINI. ALL RIGHTS RESERVED.</p>
+			</div>
+		</footer>
+		<!-- footer end -->
+
+	</main>
+	<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript">
+			function j_test(n){
+	        	$('html, body').stop().animate({
+	            	scrollTop : $('#mainContents > div').eq(n).offset().top
+	        	});
+	    	}
+	    	
+			const historyData = [
+				{
+					title: 'MAVEL',
+					img: './images/main/a.jpeg',
+					url: 'https://www.youtube.com/watch?v=Ko2NWhXI9e8',
+				},
+				{
+					title: 'HEALTH',
+					img: './images/main/b.jpeg',
+					url: 'https://www.youtube.com/watch?v=KKmvCxsrO4I',
+				},
+				{
+					title: 'FASHION',
+					img: './images/main/c.png',
+					url: 'https://www.youtube.com/watch?v=6SRr8qSL4lw',
+				},
+				{
+					title: 'CAFE',
+					img: './images/main/d.jpeg',
+					url: 'https://www.youtube.com/shorts/rVuXh3gLDe0',
+				},
+				{
+					title: 'CAT',
+					img: './images/main/e.png',
+					url: 'https://www.youtube.com/watch?v=qDhOhTtPLng',
+				},
+				{
+					title: '마라샹궈',
+					img: './images/main/f.png',
+					url: 'https://www.youtube.com/watch?v=EJ1hVwcFeZ8',
+				},
+				
+			]
+
+	    	$(function(){
+				console.log('ready');
+				
+	    		$('.top').on('click', function(){
+	    			$('html, body').animate({scrollTop:0}, 500);
+	    		});
+
+				$(window).on('scroll', function(){
+					if(!$('.skills').hasClass('active')){
+						const skills = $('.skills').offset().top - 200;
+						const sc = $(document).scrollTop();
+
+						if(skills <= sc){
+								$('.skills').addClass('active');
+							}
+						}
+				});
+
+				$.each(historyData, function(index, item){
+					let output= '';
+					
+					output += '<li><a href="' + item.url + '" target="_blank">';
+					output += '<div class="img-box"><img src="' + item.img + '" src="' + item.title + '" /></div>';
+					output += '<div class="desc-box">';
+					output += '<p><strong class="tit">' + item.title + '</strong></p>';
+					output += '</div></a></li>';
+
+					$('#favorite').prepend(output);
+				})
+			});
+	</script>
+</body>
+</html>
